@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Users/richardchiang/Desktop/WakeMeUp/Wake Me Up/Wake Me Up/Models"
+      name = "Models">
+   </Group>
+   <Group
+      location = "group:/Users/richardchiang/Desktop/WakeMeUp/Wake Me Up/Wake Me Up/UI"
+      name = "UI">
+      <FileRef
+         location = "group:bottomBtn.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RoundedButton.swift">
+      </FileRef>
+      <FileRef
+         location = "group:StylizedTimeLabel.swift">
+      </FileRef>
+      <FileRef
+         location = "group:topBtn.swift">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "self:Wake Me Up.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

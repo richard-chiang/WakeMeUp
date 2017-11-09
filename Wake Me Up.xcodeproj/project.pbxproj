@@ -21,6 +21,7 @@
 		89EA51651FB43CDD00F77BA3 /* bottomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51641FB43CDD00F77BA3 /* bottomBtn.swift */; };
 		89EA516A1FB4E52C00F77BA3 /* homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EA51681FB4E52B00F77BA3 /* homepage.png */; };
 		89EA516D1FB4E75300F77BA3 /* setter-page.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EA516C1FB4E75300F77BA3 /* setter-page.png */; };
+		89EA51821FB4F63600F77BA3 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51811FB4F63600F77BA3 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		89EA51641FB43CDD00F77BA3 /* bottomBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomBtn.swift; sourceTree = "<group>"; };
 		89EA51681FB4E52B00F77BA3 /* homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homepage.png; sourceTree = "<group>"; };
 		89EA516C1FB4E75300F77BA3 /* setter-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setter-page.png"; path = "../../../../setter-page.png"; sourceTree = "<group>"; };
+		89EA51811FB4F63600F77BA3 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */,
 				89EA51621FB439CF00F77BA3 /* topBtn.swift */,
 				89EA51641FB43CDD00F77BA3 /* bottomBtn.swift */,
+				89EA51811FB4F63600F77BA3 /* Alarm.swift */,
 			);
 			path = "Wake Me Up";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				8942624F1FB0DDA000B67C17 /* ViewController.swift in Sources */,
 				8942624D1FB0DDA000B67C17 /* AppDelegate.swift in Sources */,
 				89EA51631FB439CF00F77BA3 /* topBtn.swift in Sources */,
+				89EA51821FB4F63600F77BA3 /* Alarm.swift in Sources */,
 				895AA6CE1FB41BA800EC09FF /* SetterViewController.swift in Sources */,
 				89EA515F1FB430AB00F77BA3 /* RoundedButton.swift in Sources */,
 				89EA51611FB4335300F77BA3 /* StylizedTimeLabel.swift in Sources */,
