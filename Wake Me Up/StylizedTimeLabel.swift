@@ -23,7 +23,6 @@ class StylizedTimeLabel: UILabel {
     }
     
     func commonInit(){
-        self.layer.cornerRadius = 3
         self.clipsToBounds = true
         self.textColor = UIColor.black
         self.setProperties(borderWidth: 1.0, borderColor:UIColor.black)
