@@ -50,8 +50,8 @@
         <!--Item-->
         <scene sceneID="b8l-4D-OF1">
             <objects>
-                <viewController id="hFM-Xk-pDw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ev9-lX-Aw6" customClass="SetterViewerController" customModule="Wake_Me_Up" customModuleProvider="target">
+                <viewController id="hFM-Xk-pDw" customClass="SetterViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ev9-lX-Aw6" customClass="SetterViewerController" customModule="Wake_Me_Up">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -83,59 +83,89 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-7P-NLs" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-7P-NLs" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="36" y="259" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="tOW-iH-NtN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-0X-i31" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-0X-i31" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="99" y="131" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="tux-hD-gWz"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-gA-kwa" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-gA-kwa" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="99" y="259" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="4a5-uw-I1g"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-rN-aIq" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-rN-aIq" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="180" y="131" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="Zyo-ce-PVM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-ff-hIf" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-ff-hIf" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="180" y="259" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="Bgs-wJ-T9W"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-rM-prX" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-rM-prX" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="243" y="259" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="j5O-mi-HyN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTt-i7-jqw" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTt-i7-jqw" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="36" y="131" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="gUH-Xt-KFK"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnt-zX-BaS" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnt-zX-BaS" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="23" y="373" width="329" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="70"/>
                                 <size key="titleShadowOffset" width="-3" height="0.0"/>
                                 <state key="normal" title="AWAKEN"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="XSh-MX-Bom"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="303" y="174" width="72" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
                                 <state key="normal" title="AM"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="nU9-QZ-6KC"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IN-bD-hS5" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IN-bD-hS5" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="303" y="216" width="72" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
                                 <state key="normal" title="PM"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="die-wo-u9f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-Mb-NTU" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="36" y="160" width="50" height="100"/>
@@ -144,10 +174,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-h1-Lcv" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-h1-Lcv" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
                                 <rect key="frame" x="243" y="131" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="PmD-kd-qZ6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,6 +188,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CUM-lC-zJr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="hLabel" destination="xmS-kJ-OOl" id="x2o-3k-a1L"/>
+                        <outlet property="hhLabel" destination="MdA-Mb-NTU" id="T6H-RX-djg"/>
+                        <outlet property="mLabel" destination="4bQ-3x-e6o" id="wFA-zk-7Ra"/>
+                        <outlet property="mmLabel" destination="PJ8-cC-L9i" id="zMd-d6-fNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-Vb-ZUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
