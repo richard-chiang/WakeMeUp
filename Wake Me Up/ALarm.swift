@@ -22,8 +22,10 @@ class Alarm {
         let date = Date()
         let calendar = Calendar.current
         
+        // 24h clock from Foundation Calendar
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
+        print("\(hour) : \(minute)")
         
         return hour == self.hour && minute == self.minute
     }
