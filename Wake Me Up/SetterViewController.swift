@@ -33,7 +33,15 @@ class SetterViewController: UIViewController {
     // Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setTimeVariables()
+        let date = Date()
+        let calendar = Calendar.current
+        mm = calendar.component(.minute, from: date) / 10
+        m = calendar.component(.minute, from: date) % 10
+        
+        hh = calendar.component(.hour, from: date) / 10
+        h = calendar.component(.hour, from: date) % 10
+        
+        setTimeVariables()
         
     }
 
@@ -54,44 +62,34 @@ class SetterViewController: UIViewController {
     @IBAction func userChangeAlarm(_ sender: UIButton) {
         switch (sender.tag){
         case 1:
-            print("add 1 to hh")
             hh = hh + 1
         case 2:
-            print("add 1 to h")
             h += 1
         case 3:
-            print("add 1 to mm")
             mm += 1
         case 4:
-            print("add 1 to m")
             m += 1
         case 11:
-            print("minus 1 to hh")
             hh -= 1
         case 12:
-            print("minus 1 to h")
             h -= 1
         case 13:
-            print("minus 1 to mm")
             mm -= 1
         case 14:
-            print("minus 1 to m")
             m -= 1
         case 21:
-            print("set to am")
             isAm = true
         case 22:
-            print("set to pm")
             isAm = false
         case 31:
             let hour: Int = hh * 10 + h
             let minute: Int = mm * 10 + m
             let alarm: Alarm = Alarm(atHour: hour, minute: minute)
-            print("call alarm")
-            alarm.isItNow()
         default:
             print("Error: no such button should exist")
         }
+        
+        updateUI()
     }
     
     // Custom Functions
@@ -113,5 +111,27 @@ class SetterViewController: UIViewController {
         guard let hourH = Int(hText) else { return }
         h = hourH
     }
+    
+    func updateUI(){
+        
+        var hour = hh * 10 + h
+        var minute = mm * 10 + m
+        
+        // hour : 00 - 23
+        hour = hour % 24
+        
+        hh = hour / 10
+        h = hour % 10
+        
+        // minute : 00 - 59
+        minute = minute % 60
+        
+        mm = minute / 10
+        m = minute % 10
 
+        hhLabel.text = String(hh)
+        hLabel.text = String(h)
+        mmLabel.text = String(mm)
+        mLabel.text = String(m)
+    }
 }
