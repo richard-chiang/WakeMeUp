@@ -18,6 +18,10 @@ class Alarm {
         self.minute = m
     }
     
+    convenience init(){
+        self.init(atHour: 0, minute: 0)
+    }
+    
     func isItNow() -> Bool {
         let date = Date()
         let calendar = Calendar.current

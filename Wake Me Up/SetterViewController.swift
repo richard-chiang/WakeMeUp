@@ -50,6 +50,30 @@ class SetterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let hour: Int = hh * 10 + h
+        let minute: Int = mm * 10 + m
+        
+        if hour >= 24 {
+            showAlert("Exceed Hour",
+                      message: "Invalid Time. Please set the time again before activating the alarm.")
+            return false
+        } else if minute >= 60 {
+            showAlert("Exceed Minute",
+                      message: "Invalid Time. Please set the time again before activating the alarm.")
+            return false
+        }
+        
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "awaken"{
+            let dest = segue.destination as? ViewController
+            dest?.alarm = Alarm(atHour: getHour(), minute: getMinute())
+        }
+    }
+    
 
     
     // Cocoa Touch Functions
@@ -79,25 +103,25 @@ class SetterViewController: UIViewController {
             
         case 11:
             hh -= 1
-            if hh <= 0 {
+            if hh < 0 {
                 hh = 2
             }
         
         case 12:
             h -= 1
-            if hh <= 0 {
-                hh = 9
+            if h < 0 {
+                h = 9
             }
         
         case 13:
             mm -= 1
-            if mm <= 0 {
+            if mm < 0 {
                 mm = 5
             }
         
         case 14:
             m -= 1
-            if m <= 0 {
+            if m < 0 {
                 m = 9
             }
         
@@ -112,26 +136,6 @@ class SetterViewController: UIViewController {
         }
         
         updateUI()
-    }
-    
-    // TODO cancel segue if exceed time limit
-    // TODO pass on the Alarm to ViewController if accept
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let hour: Int = hh * 10 + h
-        let minute: Int = mm * 10 + m
-        
-        if hour >= 24 {
-            let alertController = UIAlertController(title: "Exceed Hour", message: "Invalid Time. Please set the time again before activating the alarm.", preferredStyle: .alert)
-            let alert = UIAlertAction(title: "Ok", style: .default, handler: alertHandler)
-        } else if minute >= 60 {
-            let alertController = UIAlertController(title: "Exceed Minute", message: "Invalid Time. Please set the time again before activating the alarm.", preferredStyle: .alert)
-            let alert = UIAlertAction(title: "Ok", style: .default, handler: alertHandler)
-        } else {
-            let alarm: Alarm = Alarm(atHour: hour, minute: minute)
-        }
-        
-        let dest = segue.destination as! UIViewController
-        
     }
     
     // Custom Functions
@@ -164,5 +168,20 @@ class SetterViewController: UIViewController {
     func alertHandler(alert: UIAlertAction){
         
     }
+    
+    func showAlert(_ title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertAction(title: "Ok", style: .default, handler: alertHandler)
+        alertController.addAction(alert)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func getHour() -> Int{
+        return hh * 10 + h
+    }
+    
+    func getMinute() -> Int {
+        return mm * 10 + m
+    }
 }
-}
+

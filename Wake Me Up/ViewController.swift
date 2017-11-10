@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var alarm: Alarm = Alarm()
 
     override func viewDidLoad() {
         super.viewDidLoad()

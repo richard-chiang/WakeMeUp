@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="trench100free.ttf">
+        <array key="trench100free.otf">
             <string>Trench-Thin</string>
         </array>
     </customFonts>
@@ -147,6 +147,7 @@
                                 <state key="normal" title="AWAKEN"/>
                                 <connections>
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="XSh-MX-Bom"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="awaken" id="yE4-cM-bqL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
@@ -219,4 +220,7 @@
             <point key="canvasLocation" x="-163.19999999999999" y="127.736131934033"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yE4-cM-bqL"/>
+    </inferredMetricsTieBreakers>
 </document>
