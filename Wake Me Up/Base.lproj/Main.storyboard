@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wc4-yH-G3V">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,76 +15,81 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="08 : 20 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2A-jE-3aH">
-                                <rect key="frame" x="63" y="280" width="249" height="104"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU WILL AWAKEN AT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy6-eG-tHH">
+                                <rect key="frame" x="19" y="197" width="285" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="08 : 20 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2A-jE-3aH">
+                                <rect key="frame" x="37" y="290" width="249" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU WILL AWAKEN AT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy6-eG-tHH">
-                                <rect key="frame" x="19" y="197" width="337" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="aB0-aO-rd4"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="alarm_clock" id="aB0-aO-rd4">
+                        <color key="badgeColor" red="1" green="0.1862140914" blue="0.1442858695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="timeLabel" destination="p2A-jE-3aH" id="56f-kr-F1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="-125"/>
+            <point key="canvasLocation" x="705" y="-125.70422535211267"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="b8l-4D-OF1">
             <objects>
                 <viewController id="hFM-Xk-pDw" customClass="SetterViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ev9-lX-Aw6" customClass="SetterViewerController" customModule="Wake_Me_Up">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmS-kJ-OOl" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="99" y="160" width="50" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmS-kJ-OOl" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="91" y="129" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ8-cC-L9i" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="180" y="160" width="50" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ8-cC-L9i" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="180" y="129" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bQ-3x-e6o" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="243" y="160" width="50" height="100"/>
+                                <rect key="frame" x="243" y="129" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-u4-e2M">
-                                <rect key="frame" x="155" y="156" width="25" height="100"/>
+                                <rect key="frame" x="155" y="125" width="25" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-7P-NLs" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="36" y="259" width="50" height="30"/>
+                                <rect key="frame" x="28" y="228" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
                                 <connections>
@@ -92,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-0X-i31" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="99" y="131" width="50" height="30"/>
+                                <rect key="frame" x="91" y="100" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
                                 <connections>
@@ -100,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-gA-kwa" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="99" y="259" width="50" height="30"/>
+                                <rect key="frame" x="91" y="228" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
                                 <connections>
@@ -108,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-rN-aIq" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="180" y="131" width="50" height="30"/>
+                                <rect key="frame" x="180" y="100" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
                                 <connections>
@@ -116,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-ff-hIf" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="180" y="259" width="50" height="30"/>
+                                <rect key="frame" x="180" y="228" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
                                 <connections>
@@ -124,7 +129,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-rM-prX" customClass="bottomBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="243" y="259" width="50" height="30"/>
+                                <rect key="frame" x="243" y="228" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DN"/>
                                 <connections>
@@ -132,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTt-i7-jqw" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="36" y="131" width="50" height="30"/>
+                                <rect key="frame" x="28" y="100" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
                                 <connections>
@@ -140,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnt-zX-BaS" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="23" y="373" width="329" height="88"/>
+                                <rect key="frame" x="22" y="370" width="274" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="70"/>
                                 <size key="titleShadowOffset" width="-3" height="0.0"/>
@@ -150,8 +155,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="awaken" id="yE4-cM-bqL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="303" y="174" width="72" height="38"/>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="50" y="293" width="72" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
                                 <state key="normal" title="AM"/>
@@ -159,8 +164,23 @@
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="nU9-QZ-6KC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-Mb-NTU" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="28" y="129" width="50" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-h1-Lcv" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="243" y="100" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="PmD-kd-qZ6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IN-bD-hS5" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="303" y="216" width="72" height="38"/>
+                                <rect key="frame" x="202" y="293" width="72" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
                                 <state key="normal" title="PM"/>
@@ -168,26 +188,11 @@
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="die-wo-u9f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-Mb-NTU" customClass="StylizedTimeLabel" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="36" y="160" width="50" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3a-h1-Lcv" customClass="topBtn" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="243" y="131" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="UP"/>
-                                <connections>
-                                    <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="PmD-kd-qZ6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="d6X-1r-obO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CUM-lC-zJr"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="timer" id="CUM-lC-zJr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="hLabel" destination="xmS-kJ-OOl" id="x2o-3k-a1L"/>
@@ -198,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-Vb-ZUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.79999999999995" y="572.56371814092961"/>
+            <point key="canvasLocation" x="703.125" y="572.53521126760563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5lE-Vf-nTW">
@@ -220,6 +225,10 @@
             <point key="canvasLocation" x="-163.19999999999999" y="127.736131934033"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alarm_clock" width="30" height="30"/>
+        <image name="timer" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yE4-cM-bqL"/>
     </inferredMetricsTieBreakers>

@@ -17,11 +17,6 @@ class SetterViewController: UIViewController {
     @IBOutlet weak var mmLabel: StylizedTimeLabel!
     @IBOutlet weak var mLabel: StylizedTimeLabel!
     
-    
-    
-    
-    
-    
     // Variables
     
     var mm: Int = 0
@@ -29,18 +24,14 @@ class SetterViewController: UIViewController {
     var hh: Int = 0
     var h: Int = 0
     var isAm: Bool = true
+    
+    // Constants
+    let maxHour = 12
+    let maxMinute = 59 // Don't have 60 in minutes. I.e. no one says it is 12:60 PM
 
     // Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        let date = Date()
-        let calendar = Calendar.current
-        mm = calendar.component(.minute, from: date) / 10
-        m = calendar.component(.minute, from: date) % 10
-        
-        hh = calendar.component(.hour, from: date) / 10
-        h = calendar.component(.hour, from: date) % 10
-        
         setTimeVariables()
         
     }
@@ -54,11 +45,11 @@ class SetterViewController: UIViewController {
         let hour: Int = hh * 10 + h
         let minute: Int = mm * 10 + m
         
-        if hour >= 24 {
+        if hour > maxHour {
             showAlert("Exceed Hour",
                       message: "Invalid Time. Please set the time again before activating the alarm.")
             return false
-        } else if minute >= 60 {
+        } else if minute > maxMinute {
             showAlert("Exceed Minute",
                       message: "Invalid Time. Please set the time again before activating the alarm.")
             return false
@@ -70,7 +61,7 @@ class SetterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "awaken"{
             let dest = segue.destination as? ViewController
-            dest?.alarm = Alarm(atHour: getHour(), minute: getMinute())
+            dest?.alarm = Alarm(atHour: getHour(), minute: getMinute(), isAm: isAm)
         }
     }
     
@@ -87,7 +78,7 @@ class SetterViewController: UIViewController {
         switch (sender.tag){
         case 1:
             hh = hh + 1
-            hh = hh % 3
+            hh = hh % 2
             
         case 2:
             h += 1
@@ -104,7 +95,7 @@ class SetterViewController: UIViewController {
         case 11:
             hh -= 1
             if hh < 0 {
-                hh = 2
+                hh = 1
             }
         
         case 12:
