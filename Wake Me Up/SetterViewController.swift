@@ -63,33 +63,75 @@ class SetterViewController: UIViewController {
         switch (sender.tag){
         case 1:
             hh = hh + 1
+            hh = hh % 3
+            
         case 2:
             h += 1
+            h = h % 10
+            
         case 3:
             mm += 1
+            mm = mm % 6
+            
         case 4:
             m += 1
+            m = m % 10
+            
         case 11:
             hh -= 1
+            if hh <= 0 {
+                hh = 2
+            }
+        
         case 12:
             h -= 1
+            if hh <= 0 {
+                hh = 9
+            }
+        
         case 13:
             mm -= 1
+            if mm <= 0 {
+                mm = 5
+            }
+        
         case 14:
             m -= 1
+            if m <= 0 {
+                m = 9
+            }
+        
         case 21:
             isAm = true
+        
         case 22:
             isAm = false
-        case 31:
-            let hour: Int = hh * 10 + h
-            let minute: Int = mm * 10 + m
-            let alarm: Alarm = Alarm(atHour: hour, minute: minute)
+
         default:
             print("Error: no such button should exist")
         }
         
         updateUI()
+    }
+    
+    // TODO cancel segue if exceed time limit
+    // TODO pass on the Alarm to ViewController if accept
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let hour: Int = hh * 10 + h
+        let minute: Int = mm * 10 + m
+        
+        if hour >= 24 {
+            let alertController = UIAlertController(title: "Exceed Hour", message: "Invalid Time. Please set the time again before activating the alarm.", preferredStyle: .alert)
+            let alert = UIAlertAction(title: "Ok", style: .default, handler: alertHandler)
+        } else if minute >= 60 {
+            let alertController = UIAlertController(title: "Exceed Minute", message: "Invalid Time. Please set the time again before activating the alarm.", preferredStyle: .alert)
+            let alert = UIAlertAction(title: "Ok", style: .default, handler: alertHandler)
+        } else {
+            let alarm: Alarm = Alarm(atHour: hour, minute: minute)
+        }
+        
+        let dest = segue.destination as! UIViewController
+        
     }
     
     // Custom Functions
@@ -113,25 +155,14 @@ class SetterViewController: UIViewController {
     }
     
     func updateUI(){
-        
-        var hour = hh * 10 + h
-        var minute = mm * 10 + m
-        
-        // hour : 00 - 23
-        hour = hour % 24
-        
-        hh = hour / 10
-        h = hour % 10
-        
-        // minute : 00 - 59
-        minute = minute % 60
-        
-        mm = minute / 10
-        m = minute % 10
-
         hhLabel.text = String(hh)
         hLabel.text = String(h)
         mmLabel.text = String(mm)
         mLabel.text = String(m)
     }
+    
+    func alertHandler(alert: UIAlertAction){
+        
+    }
+}
 }

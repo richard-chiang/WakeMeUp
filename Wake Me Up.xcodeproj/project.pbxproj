@@ -74,6 +74,7 @@
 		8942624B1FB0DDA000B67C17 /* Wake Me Up */ = {
 			isa = PBXGroup;
 			children = (
+				89EA52451FB5206D00F77BA3 /* Supporting File */,
 				89EA51671FB4E52B00F77BA3 /* ScreenShots */,
 				895AA6C61FB4151500EC09FF /* Custom Font */,
 				8942624C1FB0DDA000B67C17 /* AppDelegate.swift */,
@@ -110,6 +111,13 @@
 			path = ScreenShots;
 			sourceTree = "<group>";
 		};
+		89EA52451FB5206D00F77BA3 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +150,7 @@
 				TargetAttributes = {
 					894262481FB0DDA000B67C17 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -330,12 +339,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TU7GX5F43;
 				INFOPLIST_FILE = "Wake Me Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.richardchiang.Wake-Me-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wake Me Up/Supporting File/Wake Me Up-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -345,12 +357,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TU7GX5F43;
 				INFOPLIST_FILE = "Wake Me Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.richardchiang.Wake-Me-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wake Me Up/Supporting File/Wake Me Up-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
