@@ -158,11 +158,13 @@
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="XSh-MX-Bom"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="50" y="293" width="72" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
-                                <state key="normal" title="AM"/>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="50" y="293" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AM">
+                                    <color key="titleColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="nU9-QZ-6KC"/>
                                 </connections>
@@ -175,11 +177,13 @@
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="PmD-kd-qZ6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IN-bD-hS5" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
-                                <rect key="frame" x="202" y="293" width="72" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="30"/>
-                                <state key="normal" title="PM"/>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IN-bD-hS5" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
+                                <rect key="frame" x="202" y="293" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PM">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="die-wo-u9f"/>
                                 </connections>
@@ -198,10 +202,12 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="timer" id="CUM-lC-zJr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="amBtn" destination="onr-6A-87c" id="IYk-uM-LDF"/>
                         <outlet property="hLabel" destination="xmS-kJ-OOl" id="x2o-3k-a1L"/>
                         <outlet property="hhLabel" destination="MdA-Mb-NTU" id="T6H-RX-djg"/>
                         <outlet property="mLabel" destination="4bQ-3x-e6o" id="wFA-zk-7Ra"/>
                         <outlet property="mmLabel" destination="PJ8-cC-L9i" id="zMd-d6-fNn"/>
+                        <outlet property="pmBtn" destination="0IN-bD-hS5" id="VrP-Gb-q7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-Vb-ZUg" userLabel="First Responder" sceneMemberID="firstResponder"/>

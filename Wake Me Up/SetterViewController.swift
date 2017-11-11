@@ -17,6 +17,8 @@ class SetterViewController: UIViewController {
     @IBOutlet weak var mmLabel: StylizedTimeLabel!
     @IBOutlet weak var mLabel: StylizedTimeLabel!
     
+    @IBOutlet weak var amBtn: RoundedButton!
+    @IBOutlet weak var pmBtn: RoundedButton!
     // Variables
     
     var mm: Int = 0
@@ -29,11 +31,15 @@ class SetterViewController: UIViewController {
     // Constants
     let maxHour = 12
     let maxMinute = 59 // Don't have 60 in minutes. I.e. no one says it is 12:60 PM
+    let sun: UIImage? = UIImage(named: "sun.png")
+    let moon: UIImage? = UIImage(named: "moon_symbol.png")
     
     // Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setTimeVariables()
+        amBtn.setImage(sun, for: .selected)
+        pmBtn.setImage(moon, for: .selected)
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,10 +98,13 @@ class SetterViewController: UIViewController {
         
         case 21:
             isAm = true
-            
+            amBtn.isSelected = isAm
+            pmBtn.isSelected = !isAm
         
         case 22:
             isAm = false
+            pmBtn.isSelected = !isAm
+            amBtn.isSelected = isAm
             
         case 31:
             if getHour() > maxHour {
