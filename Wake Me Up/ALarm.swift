@@ -12,14 +12,16 @@ class Alarm {
     
     var hour = 0
     var minute = 0
+    var isAm = true
     
-    required init(atHour h: Int, minute m: Int) {
+    required init(atHour h: Int, minute m: Int, isAm: Bool) {
         self.hour = h
         self.minute = m
+        self.isAm = isAm
     }
     
     convenience init(){
-        self.init(atHour: 0, minute: 0)
+        self.init(atHour: 0, minute: 0, isAm: true)
     }
     
     func isItNow() -> Bool {
@@ -31,6 +33,10 @@ class Alarm {
         let minute = calendar.component(.minute, from: date)
         
         return hour == self.hour && minute == self.minute
+    }
+    
+    func description() -> String {
+        return ""
     }
     
 }
