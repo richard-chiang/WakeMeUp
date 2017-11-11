@@ -24,48 +24,22 @@ class SetterViewController: UIViewController {
     var hh: Int = 0
     var h: Int = 0
     var isAm: Bool = true
+    var alarm: Alarm = Alarm()
     
     // Constants
     let maxHour = 12
     let maxMinute = 59 // Don't have 60 in minutes. I.e. no one says it is 12:60 PM
-
+    
     // Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setTimeVariables()
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        let hour: Int = hh * 10 + h
-        let minute: Int = mm * 10 + m
-        
-        if hour > maxHour {
-            showAlert("Exceed Hour",
-                      message: "Invalid Time. Please set the time again before activating the alarm.")
-            return false
-        } else if minute > maxMinute {
-            showAlert("Exceed Minute",
-                      message: "Invalid Time. Please set the time again before activating the alarm.")
-            return false
-        }
-        
-        return true
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "awaken"{
-            let dest = segue.destination as? ViewController
-            dest?.alarm = Alarm(atHour: getHour(), minute: getMinute(), isAm: isAm)
-        }
-    }
-    
-
     
     // Cocoa Touch Functions
     
@@ -121,7 +95,21 @@ class SetterViewController: UIViewController {
         
         case 22:
             isAm = false
-
+            
+        case 31:
+            if getHour() > maxHour {
+                let title = "Exceed Hour"
+                let message = "Invalid Time. Please set the time again before activating the alarm."
+                showAlert(title, message: message)
+            } else if getMinute() > maxMinute {
+                let title = "Exceed Minute"
+                let message = "Invalid Time. Please set the time again before activating the alarm."
+                showAlert(title, message: message)
+            } else {
+                let customTabController = self.tabBarController as! CustomViewController
+                customTabController.alarm = Alarm(atHour: getHour(), minute: getMinute(), isAm: isAm)
+            }
+            
         default:
             print("Error: no such button should exist")
         }

@@ -36,7 +36,33 @@ class Alarm {
     }
     
     func description() -> String {
-        return ""
+        var s = ""
+        
+        if hour < 10 {
+            s.append("0")
+            s.append(String(hour))
+        } else {
+            s.append(String(hour))
+        }
+        
+        s.append(" : ")
+        
+        if minute < 10 {
+            s.append("0")
+            s.append(String(minute))
+        } else {
+            s.append(String(minute))
+        }
+        
+        s.append(" ")
+        
+        if isAm {
+            s.append("AM")
+        } else {
+            s.append("PM")
+        }
+        
+        return s
     }
     
 }

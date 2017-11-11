@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="-125.70422535211267"/>
+            <point key="canvasLocation" x="-771" y="1065"/>
         </scene>
         <!--Setting-->
         <scene sceneID="b8l-4D-OF1">
@@ -156,7 +156,6 @@
                                 <state key="normal" title="AWAKEN"/>
                                 <connections>
                                     <action selector="userChangeAlarm:" destination="hFM-Xk-pDw" eventType="touchUpInside" id="XSh-MX-Bom"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="awaken" id="yE4-cM-bqL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onr-6A-87c" customClass="RoundedButton" customModule="Wake_Me_Up" customModuleProvider="target">
@@ -207,12 +206,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb6-Vb-ZUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703.125" y="572.53521126760563"/>
+            <point key="canvasLocation" x="338" y="1046"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom View Controller-->
         <scene sceneID="5lE-Vf-nTW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wc4-yH-G3V" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wc4-yH-G3V" customClass="CustomViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xY1-pP-RYb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -235,7 +234,4 @@
         <image name="timer" width="30" height="30"/>
         <image name="up" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yE4-cM-bqL"/>
-    </inferredMetricsTieBreakers>
 </document>

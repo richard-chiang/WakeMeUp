@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let customTabController = self.tabBarController as! CustomViewController
+        alarm = customTabController.alarm
+        timeLabel.text = alarm.description()
     }
 
     override func didReceiveMemoryWarning() {

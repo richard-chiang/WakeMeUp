@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89284DB61FB6851A00D79B07 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89284DB51FB6851A00D79B07 /* CustomViewController.swift */; };
 		8942624D1FB0DDA000B67C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942624C1FB0DDA000B67C17 /* AppDelegate.swift */; };
 		8942624F1FB0DDA000B67C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942624E1FB0DDA000B67C17 /* ViewController.swift */; };
 		894262521FB0DDA000B67C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894262501FB0DDA000B67C17 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89284DB51FB6851A00D79B07 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		894262491FB0DDA000B67C17 /* Wake Me Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wake Me Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8942624C1FB0DDA000B67C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8942624E1FB0DDA000B67C17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				89EA51621FB439CF00F77BA3 /* topBtn.swift */,
 				89EA51641FB43CDD00F77BA3 /* bottomBtn.swift */,
 				89EA51811FB4F63600F77BA3 /* Alarm.swift */,
+				89284DB51FB6851A00D79B07 /* CustomViewController.swift */,
 			);
 			path = "Wake Me Up";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89284DB61FB6851A00D79B07 /* CustomViewController.swift in Sources */,
 				8942624F1FB0DDA000B67C17 /* ViewController.swift in Sources */,
 				8942624D1FB0DDA000B67C17 /* AppDelegate.swift in Sources */,
 				89EA51631FB439CF00F77BA3 /* topBtn.swift in Sources */,
