@@ -118,6 +118,7 @@ class SetterViewController: UIViewController {
             } else {
                 let customTabController = self.tabBarController as! CustomViewController
                 customTabController.alarm = Alarm(atHour: getHour(), minute: getMinute(), isAm: isAm)
+                customTabController.alarm.switchOn()
                 customTabController.selectedIndex = 0
             }
             

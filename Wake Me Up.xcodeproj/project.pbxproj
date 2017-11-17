@@ -16,6 +16,7 @@
 		895AA6C91FB4152B00EC09FF /* trench100free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 895AA6C71FB4152B00EC09FF /* trench100free.ttf */; };
 		895AA6CA1FB4152B00EC09FF /* trench100free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 895AA6C81FB4152B00EC09FF /* trench100free.otf */; };
 		895AA6CE1FB41BA800EC09FF /* SetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895AA6CD1FB41BA800EC09FF /* SetterViewController.swift */; };
+		8972AE5A1FBE5A1400719294 /* church-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8972AE591FBE5A1400719294 /* church-bell.mp3 */; };
 		89EA515F1FB430AB00F77BA3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA515E1FB430AB00F77BA3 /* RoundedButton.swift */; };
 		89EA51611FB4335300F77BA3 /* StylizedTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */; };
 		89EA51631FB439CF00F77BA3 /* topBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51621FB439CF00F77BA3 /* topBtn.swift */; };
@@ -37,6 +38,7 @@
 		895AA6C71FB4152B00EC09FF /* trench100free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trench100free.ttf; sourceTree = "<group>"; };
 		895AA6C81FB4152B00EC09FF /* trench100free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trench100free.otf; sourceTree = "<group>"; };
 		895AA6CD1FB41BA800EC09FF /* SetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetterViewController.swift; sourceTree = "<group>"; };
+		8972AE591FBE5A1400719294 /* church-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "church-bell.mp3"; sourceTree = "<group>"; };
 		89EA515E1FB430AB00F77BA3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylizedTimeLabel.swift; sourceTree = "<group>"; };
 		89EA51621FB439CF00F77BA3 /* topBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topBtn.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		8942624B1FB0DDA000B67C17 /* Wake Me Up */ = {
 			isa = PBXGroup;
 			children = (
+				8972AE581FBE5A1400719294 /* Sounds */,
 				89EA51671FB4E52B00F77BA3 /* ScreenShots */,
 				895AA6C61FB4151500EC09FF /* Custom Font */,
 				8942624C1FB0DDA000B67C17 /* AppDelegate.swift */,
@@ -102,6 +105,14 @@
 				895AA6C71FB4152B00EC09FF /* trench100free.ttf */,
 			);
 			path = "Custom Font";
+			sourceTree = "<group>";
+		};
+		8972AE581FBE5A1400719294 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8972AE591FBE5A1400719294 /* church-bell.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		89EA51671FB4E52B00F77BA3 /* ScreenShots */ = {
@@ -179,6 +190,7 @@
 				894262571FB0DDA000B67C17 /* LaunchScreen.storyboard in Resources */,
 				894262541FB0DDA000B67C17 /* Assets.xcassets in Resources */,
 				894262521FB0DDA000B67C17 /* Main.storyboard in Resources */,
+				8972AE5A1FBE5A1400719294 /* church-bell.mp3 in Resources */,
 				89EA51841FB501D100F77BA3 /* setter-page.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

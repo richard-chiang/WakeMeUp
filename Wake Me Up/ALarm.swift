@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Alarm {
     
     var hour = 0
     var minute = 0
-    var isAm = true
+    var isAm = true // if true, time is AM. Otherwise, PM
+    var isOn = false // if true, the alarm is activated. Otherwise remains inactive
+    
+    var alarm: AVAudioPlayer?
+    let alarmFile = "church-bell"
+    let alarmFileType = "mp3"
     
     required init(atHour h: Int, minute m: Int, isAm: Bool) {
         self.hour = h
@@ -24,6 +30,28 @@ class Alarm {
         self.init(atHour: 0, minute: 0, isAm: true)
     }
     
+    func switchOn(){
+        isOn = true
+    }
+    
+    func switchOff() {
+        isOn = false
+    }
+    
+    func ring() {
+        let url = Bundle.main.url(forResource: alarmFile, withExtension: alarmFileType)!
+        
+        do {
+            alarm = try AVAudioPlayer(contentsOf: url)
+            guard let alarm = alarm else { return }
+            
+            alarm.prepareToPlay()
+            alarm.play()
+        } catch let error{
+            print(error.localizedDescription)
+        }
+    }
+    
     func isItNow() -> Bool {
         let date = Date()
         let calendar = Calendar.current
@@ -32,7 +60,10 @@ class Alarm {
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
         
-        return hour == self.hour && minute == self.minute
+        let alarmHour = isAm ? self.hour : self.hour + 12
+        let alarmMinute = self.minute
+        
+        return isOn && hour == alarmHour && minute == alarmMinute
     }
     
     func description() -> String {
@@ -64,5 +95,4 @@ class Alarm {
         
         return s
     }
-    
 }

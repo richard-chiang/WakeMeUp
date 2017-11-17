@@ -14,7 +14,7 @@ class CustomViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        alarm.switchOff()
         // Do any additional setup after loading the view.
     }
 

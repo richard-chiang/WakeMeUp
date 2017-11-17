@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var alarm: Alarm = Alarm()
+    var timer: Timer!
 
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -23,13 +24,25 @@ class ViewController: UIViewController {
         let customTabController = self.tabBarController as! CustomViewController
         alarm = customTabController.alarm
         timeLabel.text = alarm.description()
+        
+        // Keep checking for alarm until view is changed
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @objc func checkTime() {
+        if alarm.isItNow() {
+            alarm.ring()
+        }
+    }
 }
 
