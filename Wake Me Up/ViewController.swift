@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     @objc func checkTime() {
         if alarm.isItNow() {
-            alarm.ringSilently()
+            alarm.ring()
         }
     }
 }
