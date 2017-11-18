@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         timer.invalidate()
+        alarm.switchOff()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,9 +40,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        alarm.switchOff()
+    }
+    
     @objc func checkTime() {
         if alarm.isItNow() {
-            alarm.ring()
+            alarm.ringSilently()
         }
     }
 }
