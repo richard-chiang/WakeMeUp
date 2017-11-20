@@ -17,6 +17,8 @@
 		895AA6CA1FB4152B00EC09FF /* trench100free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 895AA6C81FB4152B00EC09FF /* trench100free.otf */; };
 		895AA6CE1FB41BA800EC09FF /* SetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895AA6CD1FB41BA800EC09FF /* SetterViewController.swift */; };
 		8972AE5A1FBE5A1400719294 /* church-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8972AE591FBE5A1400719294 /* church-bell.mp3 */; };
+		89DFEB221FC3545E006D6DB7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DFEB211FC3545E006D6DB7 /* Question.swift */; };
+		89DFEB241FC3546F006D6DB7 /* QuizBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DFEB231FC3546F006D6DB7 /* QuizBank.swift */; };
 		89EA515F1FB430AB00F77BA3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA515E1FB430AB00F77BA3 /* RoundedButton.swift */; };
 		89EA51611FB4335300F77BA3 /* StylizedTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */; };
 		89EA51631FB439CF00F77BA3 /* topBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA51621FB439CF00F77BA3 /* topBtn.swift */; };
@@ -39,6 +41,8 @@
 		895AA6C81FB4152B00EC09FF /* trench100free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trench100free.otf; sourceTree = "<group>"; };
 		895AA6CD1FB41BA800EC09FF /* SetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetterViewController.swift; sourceTree = "<group>"; };
 		8972AE591FBE5A1400719294 /* church-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "church-bell.mp3"; sourceTree = "<group>"; };
+		89DFEB211FC3545E006D6DB7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		89DFEB231FC3546F006D6DB7 /* QuizBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBank.swift; sourceTree = "<group>"; };
 		89EA515E1FB430AB00F77BA3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylizedTimeLabel.swift; sourceTree = "<group>"; };
 		89EA51621FB439CF00F77BA3 /* topBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topBtn.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				894262581FB0DDA000B67C17 /* Info.plist */,
 				895AA6CD1FB41BA800EC09FF /* SetterViewController.swift */,
 				89EA515E1FB430AB00F77BA3 /* RoundedButton.swift */,
+				89DFEB211FC3545E006D6DB7 /* Question.swift */,
+				89DFEB231FC3546F006D6DB7 /* QuizBank.swift */,
 				89EA51601FB4335300F77BA3 /* StylizedTimeLabel.swift */,
 				89EA51621FB439CF00F77BA3 /* topBtn.swift */,
 				89EA51641FB43CDD00F77BA3 /* bottomBtn.swift */,
@@ -207,6 +213,8 @@
 				8942624D1FB0DDA000B67C17 /* AppDelegate.swift in Sources */,
 				89EA51631FB439CF00F77BA3 /* topBtn.swift in Sources */,
 				89EA51821FB4F63600F77BA3 /* Alarm.swift in Sources */,
+				89DFEB241FC3546F006D6DB7 /* QuizBank.swift in Sources */,
+				89DFEB221FC3545E006D6DB7 /* Question.swift in Sources */,
 				895AA6CE1FB41BA800EC09FF /* SetterViewController.swift in Sources */,
 				89EA515F1FB430AB00F77BA3 /* RoundedButton.swift in Sources */,
 				89EA51611FB4335300F77BA3 /* StylizedTimeLabel.swift in Sources */,
