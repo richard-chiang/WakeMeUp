@@ -16,7 +16,7 @@ class Alarm {
     var isAm = true // if true, time is AM. Otherwise, PM
     var isOn = false // if true, the alarm is activated. Otherwise remains inactive
     
-    var alarm: AVAudioPlayer?
+    lazy var alarm: AVAudioPlayer? = AVAudioPlayer()
     let alarmFile = "church-bell"
     let alarmFileType = "mp3"
     
